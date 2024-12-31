@@ -17,7 +17,7 @@ function AskQuestion() {
     const fetchUser = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('https://localhost:3000/api/checkUser', {
+        const response = await axios.get('http://localhost:3000/api/checkUser', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -42,7 +42,7 @@ function AskQuestion() {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'https://localhost:3000/api/question',
+        'http://localhost:3000/api/question',
         { user_id: userId, title, body: description },
         {
           headers: {

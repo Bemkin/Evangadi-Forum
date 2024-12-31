@@ -26,7 +26,7 @@ function Header() {
         </div>
         <div className='anchor-tags'>
           <Link to="/">Home</Link>
-          <Link to="#">How it Works</Link>
+          <Link to="/howitworks">How it Works</Link>
           <button className='Sign-in-button' onClick={handleAuthButtonClick}>
             {isLoggedIn ? 'SIGN OUT' : 'SIGN IN'}
           </button>

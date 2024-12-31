@@ -12,7 +12,7 @@ function QuestionPage() {
     const fetchUser = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('https://localhost:3000/api/checkUser', {
+        const response = await axios.get('http://localhost:3000/api/checkUser', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -28,12 +28,14 @@ function QuestionPage() {
     const fetchQuestions = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('https://localhost:3000/api/question', {
+        const response = await axios.get('http://localhost:3000/api/question', {
           headers: {
             Authorization: `Bearer ${token}`
           }
         });
-        setQuestions(response.data.questions);
+        // Sort questions by creation date in descending order
+        const sortedQuestions = response.data.questions.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+        setQuestions(sortedQuestions);
       } catch (error) {
         setError('Failed to fetch questions. Please try again later.');
       }
@@ -45,8 +47,8 @@ function QuestionPage() {
   return (
     <div className="question-page">
       <header className="question-header">
-      <Link to="/ask">
-        <button className="ask-question-button">Ask Question</button>
+        <Link to="/ask">
+          <button className="ask-question-button">Ask Question</button>
         </Link>
         <h2>Welcome, {user ? user : 'Guest'}</h2>
       </header>

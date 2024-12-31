@@ -8,6 +8,7 @@ import QuestionPage from './Components/QuestionPage/QuestionPage';
 import QuestionDetail from './Components/QuestionDetail/QuestionDetail';
 import AskQuestion from './Components/AskQuestion/AskQuestion'; 
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
+import HowItWorks from './Components/HowItWorks/HowItWorks'
 import { AuthProvider } from './Hooks/AuthContext';
 import './App.css';
 
@@ -18,10 +19,10 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/questions" element={<ProtectedRoute><QuestionPage /></ProtectedRoute>} />
+          <Route path="/" element={<ProtectedRoute><QuestionPage /></ProtectedRoute>} />
+          <Route path='/howitworks' element={<HowItWorks/>} />
           <Route path="/questions/:question_id" element={<ProtectedRoute><QuestionDetail /></ProtectedRoute>} />
-          <Route path="/ask" element={<ProtectedRoute><AskQuestion /></ProtectedRoute>} /> {/* Route for AskQuestion */}
-          <Route path="/" element={<Login />} />
+          <Route path="/ask" element={<ProtectedRoute><AskQuestion /></ProtectedRoute>} />
         </Routes>
         <Footer />
     </AuthProvider>

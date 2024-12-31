@@ -139,3 +139,36 @@
     color: red;
   }
   
+  /* For devices with a screen width up to 768px */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+    height: auto; 
+    padding: 10px;
+  }
+
+  .register-form-wrapper {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .register-form {
+    margin-top: 20px;
+  }
+
+  .register-form-group.inline {
+    width: 341px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .register-form-group.inline input {
+    width: 100%;
+  }
+
+  .info-section {
+    width: 100%;
+    padding: 20px;
+  }
+}

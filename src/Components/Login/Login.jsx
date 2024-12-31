@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Hooks/AuthContext';
 import './Login.css';
 
@@ -15,12 +15,12 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://localhost:3000/api/login', { email, password });
+      const response = await axios.post('http://localhost:3000/api/login', { email, password });
       setSuccess('Login successful!');
       setError('');
       localStorage.setItem('token', response.data.token);
-      login(); // Update login state
-      navigate('/questions');
+      login();
+      navigate('/');
     } catch (error) {
       setError('Invalid email or password');
       setSuccess('');
@@ -34,7 +34,7 @@ function Login() {
         <form className='login-form' onSubmit={handleSubmit}>
           <h2>Login to your account</h2>
           <p>
-            Don't have an account? <a href='/register'>Create a new account</a>
+            Don't have an account? <Link to='/register'>Create a new account</Link>
           </p>
           <div className='form-group'>
             <label htmlFor='email'></label>
@@ -61,15 +61,17 @@ function Login() {
             {success && <p className='success-message'>{success}</p>}
           </div>
           <button type='submit' className='submit-button'>Submit</button>
-          <a className='bottom-anchor' href='/register'>Create an account?</a>
+          <Link className='bottom-anchor' to='/register'>Create an account?</Link>
         </form>
       </div>
       <div className='info-section'>
-        <a className='about' href="#">About</a>
+        <Link className='about' to="#">About</Link>
         <h2>Evangadi Networks Q&A</h2>
         <p>No matter what stage of life you are in, whether you’re just starting elementary school or being promoted to CEO of a Fortune 500 company, you have much to offer to those who are trying to follow in your footsteps.</p>
         <p>Whether you are willing to share your knowledge or you are just looking to meet mentors of your own, please start by joining the network here.</p>
-        <button className='how-it-works-button'>HOW IT WORKS</button>
+        <Link to="/howitworks">
+          <button className='how-it-works-button'>HOW IT WORKS</button>
+        </Link>
       </div>
     </div>
   );

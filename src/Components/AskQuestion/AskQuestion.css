@@ -7,7 +7,7 @@
   
   .instructions {
     margin-top: 60px;
-    width: 40%;
+    width: 75%;
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 8px;
@@ -31,7 +31,7 @@
   }
 
   .question-form {
-    width: 55%;
+    width: 75%;
     margin-top: 150px;
   }
   

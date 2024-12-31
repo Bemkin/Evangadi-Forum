@@ -13,7 +13,7 @@ function QuestionDetail() {
   // Function to fetch question details
   const fetchQuestion = async () => {
     try {
-      const response = await axios.get(`https://localhost:3000/api/question/${question_id}`);
+      const response = await axios.get(`http://localhost:3000/api/question/${question_id}`);
       setQuestion(response.data.question);
     } catch (error) {
       console.error('Failed to fetch question details:', error);
@@ -24,7 +24,7 @@ function QuestionDetail() {
   // Function to fetch answers
   const fetchAnswers = async () => {
     try {
-      const response = await axios.get(`https://localhost:3000/api/answer/${question_id}`);
+      const response = await axios.get(`http://localhost:3000/api/answer/${question_id}`);
       setAnswers(response.data.answers);
     } catch (error) {
       if (error.response && error.response.status === 404) {
@@ -49,7 +49,7 @@ function QuestionDetail() {
       const token = localStorage.getItem('token');
       const requestData = { question_id, user_id: 1, body: newAnswer }; // Include user_id
       const response = await axios.post(
-        'https://localhost:3000/api/answer',
+        'http://localhost:3000/api/answer',
         requestData,
         {
           headers: {

@@ -55,3 +55,19 @@
     color: #ffc107;
   }
   
+  /* For devices with a screen width up to 768px */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .social-icons a {
+    margin-right: 10px;
+  }
+}

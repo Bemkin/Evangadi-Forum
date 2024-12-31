@@ -1,54 +1,99 @@
 .header {
-    background-color: #f8f9fa;
-    padding: 20px 0;
-    border-bottom: 1px solid #e0e0e0;
-  }
-  
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.outer-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.inner-div {
+  display: flex;
+  align-items: center;
+}
+
+.inner-div img {
+  height: 50px;
+}
+
+.anchor-tags {
+  display: flex;
+  align-items: center;
+}
+
+.anchor-tags a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.anchor-tags a:hover {
+  color: #007bff;
+}
+
+.Sign-in-button {
+  background-color: #2e77ff;
+  color: #fff;
+  border: none;
+  padding: 10px 50px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.Sign-in-button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries */
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
   .outer-div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0 20px;
+    flex-direction: column;
+    padding: 10px 0;
   }
-  
-  .inner-div {
-    display: flex;
-    align-items: center;
-  }
-  
-  .inner-div img {
-    height: 50px;
-  }
-  
-  .anchor-tags {
-    display: flex;
-    align-items: center;
-  }
-  
+
   .anchor-tags a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
+    margin-right: 10px;
   }
-  
-  .anchor-tags a:hover {
-    color: #007bff;
-  }
-  
+
   .Sign-in-button {
-    background-color: #2e77ff;
-    color: #fff;
-    border: none;
-    padding: 10px 50px;
-    cursor: pointer;
-    font-weight: 500;
-    border-radius: 6px;
+    padding: 10px 30px;
   }
-  
-  .Sign-in-button:hover {
-    background-color: #0056b3;
+}
+
+/* Mobile Devices (< 768px) */
+@media (max-width: 767px) {
+  .outer-div {
+    flex-direction: column;
+    padding: 10px 0;
   }
-  
+
+  .inner-div img {
+    height: 40px;
+  }
+
+  .anchor-tags {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .anchor-tags a {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .Sign-in-button {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,131 +1,205 @@
+/* Your base styles remain unchanged */
+
 .login-container {
-    display: flex;
-    height: 72vh; 
-    background-image: url('../../assets/10004.jpg'); 
-    background-size: cover;
-    background-position: center;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .form-wrapper {
-    height: 600px;
-    width: 550px;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.6);
-  }
-  
-.login-form {
-    margin-top: 170px;
+  display: flex;
+  height: 72vh; 
+  background-image: url('../../assets/10004.jpg'); 
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-  .login-form h2 {
-    margin-bottom: 20px;
-    text-align: center;
+.form-wrapper {
+  height: 600px;
+  width: 550px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.6);
+}
+
+.login-form {
+  margin-top: 170px;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 96%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  margin-left: 155px;
+  width: 40%;
+  padding: 10px 0;
+  background-color: #ff8800;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.login-form p {
+  margin-left: 80px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.bottom-anchor {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #ff8800;
+}
+
+.bottom-anchor:hover {
+  text-decoration: underline;
+}
+
+.login-form p a {
+  color: #ff8800;
+  text-decoration: none;
+}
+
+.login-form p a:hover {
+  text-decoration: underline;
+}
+
+.info-section {
+  font-size: 24px;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.about {
+  text-decoration: none;
+  color: #ff8800;
+}
+
+.info-section h2 {
+  margin-bottom: 20px;
+}
+
+.info-section p {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.how-it-works-button {
+  background-color: #ff8800;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.how-it-works-button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  font-weight: bold;
+}
+
+/* Media Queries */
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .login-container {
+    font-size: 15px;
+    margin: 35px 15px 0 15px;
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+    max-width: 700px; /* Adjusted max-width for tablets */
   }
-  
-  .form-group {
-    margin-bottom: 15px;
-    text-align: left;
+
+  .form-wrapper, .info-section {
+    width: 90%;
+    padding: 20px;
+    box-shadow: none;
   }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 500;
+
+  .login-form {
+    margin-top: 100px;
   }
-  
+
   .form-group input {
-    width: 96%;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100%;
   }
-  
+
   .submit-button {
-    margin-left: 155px;
-    width: 40%;
-    padding: 10px 0;
-    background-color: #ff8800;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    margin-top: 10px;
+    margin: auto;
+    width: 50%;
   }
-  
-  .submit-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .login-form p {
-    margin-left: 80px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    color: #555;
-  }
-  
-  .bottom-anchor {
-    display: block;
-    text-align: center;
-    margin-top: 15px;
-    text-decoration: none;
-    color: #ff8800;
-  }
-  
-  .bottom-anchor:hover {
-    text-decoration: underline;
-  }
-  
-  .login-form p a {
-    color: #ff8800;
-    text-decoration: none;
-  }
-  
-  .login-form p a:hover {
-    text-decoration: underline;
-  }
-  
+
   .info-section {
-    font-size: 24px;
-    width: 550px;
-    padding: 40px;
-    border-radius: 8px;
+    padding: 20px;
+    font-size: 18px;
   }
-  
-  .about {
-    text-decoration: none;
-    color: #ff8800;
+}
+
+/* Mobile Devices (< 768px) */
+@media (max-width: 767px) {
+  .login-container {
+    font-size: 15px;
+    margin: 35px 15px 0 15px;
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+    max-width: 500px;
   }
-  
-  .info-section h2 {
-    margin-bottom: 20px;
+
+  .form-wrapper, .info-section {
+    width: 90%;
+    padding: 20px;
+    box-shadow: none;
   }
-  
-  .info-section p {
-    margin-bottom: 15px;
-    color: #333;
+
+  .login-form {
+    margin-top: 100px;
   }
-  
-  .how-it-works-button {
-    background-color: #ff8800;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: 500;
+
+  .form-group input {
+    width: 100%;
   }
-  
-  .how-it-works-button:hover {
-    background-color: #0056b3;
+
+  .submit-button {
+    margin: auto;
+    width: 50%;
   }
-  
-  .error-message {
-    font-weight: bold;
+
+  .info-section {
+    padding: 20px;
+    font-size: 18px;
   }
-  
+}
