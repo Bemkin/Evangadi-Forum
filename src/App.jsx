@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/" element={<ProtectedRoute><QuestionPage /></ProtectedRoute>} />
+          <Route path="/Evangadi-Forum/" element={<ProtectedRoute><QuestionPage /></ProtectedRoute>} />
           <Route path='/howitworks' element={<HowItWorks />} />
           <Route path="/questions/:question_id" element={<ProtectedRoute><QuestionDetail /></ProtectedRoute>} />
           <Route path="/ask" element={<ProtectedRoute><AskQuestion /></ProtectedRoute>} />
