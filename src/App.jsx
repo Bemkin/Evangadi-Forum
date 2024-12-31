@@ -15,7 +15,7 @@ import './App.css';
 function App() {
   return (
     <AuthProvider>
-      <Router>
+    
         <Header />
         <Routes>
           <Route path="/login" element={<Login />} />
@@ -26,7 +26,7 @@ function App() {
           <Route path="/ask" element={<ProtectedRoute><AskQuestion /></ProtectedRoute>} />
         </Routes>
         <Footer />
-      </Router>
+      
     </AuthProvider>
   );
 }
